@@ -1,0 +1,20 @@
+{
+  "name": "iotdk-buttonapp",
+  "description": "Small description for iotdk-buttonapp goes here",
+  "main": "",
+  "authors": [
+    "David Audran <da@iotdk.dk>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest"
+  }
+}

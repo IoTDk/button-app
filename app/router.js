@@ -7,6 +7,16 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('connection');
+  this.route('my-devices');
+  this.route('event-log');
+  this.route('callbacks');
+  this.route('analytics');
+  this.route('settings');
+  this.resource('help', function() {
+    this.route('this');
+    this.route('sigfox');
+  });
 });
 
 export default Router;
