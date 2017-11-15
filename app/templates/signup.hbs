@@ -1,0 +1,62 @@
+<style>
+  form.account-form {
+    margin-left: 520px;
+    margin-top: 0px;
+    border: 2px solid black;
+    padding: 4px;
+    width: 550px;
+  }
+  .field {
+    padding: 4px;
+    margin: 1px;
+  }
+  .field input {
+    display: inline-block;
+  }
+  label {
+    display: inline-block;
+    width: 210px;
+    text-align: right;
+  }
+  .account-text  {
+    margin-top: 250px;
+    margin-left: 520px;
+  }
+  .cancel-btn {
+    margin-left: 180px;
+  }
+</style>
+<div class="page-container">
+  <h3 class="account-text">Create your account: </h3>
+<form class="account-form">
+  <div>
+    <label>First Name:</label>
+    {{input type="text" value=fname name="fname" placeholder="Enter your first name"}}
+  </div><br>
+  <div class="field">
+    <label>Last Name:</label>
+    {{input type="text" value=lname name="lname" placeholder="Enter your last name"}}
+  </div><br>
+  <div class="field">
+    <label>Company Name:</label>
+    {{input type="text" value=cname name="cname" placeholder="Enter your company's name.."}}
+  </div><br>
+  <div class="field">
+    <label>Email: </label>
+    {{input type="text" value=newemail name="newemail"placeholder="Enter your email.."}}
+  </div><br>
+  <div class="field">
+    <label>Password: </label>
+    {{input type="password" value=newpass name="newpass" placeholder="Enter your password"}}
+  </div><br>
+  <div class="field">
+    <label>API Login:</label>
+    {{input type="text" value=apiLogin name="apiLogin" placeholder="Enter your Sigfox's API Login"}}
+  </div><br>
+  <div class="field">
+    <label>API Password:</label>
+    {{input type="password" value=apiPass name="apiPass" placeholder="Enter your Sigfox's API Password"}}
+  </div><br>
+  <p class="cancel-btn">{{#link-to 'connection'}}Cancel{{/link-to}} <button class="btn btn-primary" {{action 'addUser'}}>Sign Up</button></p>
+</form>
+</div>

@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('this');
     this.route('sigfox');
   });
+  this.route('signup');
 });
 
 export default Router;

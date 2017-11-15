@@ -4,14 +4,6 @@
     margin-left: 650px;
     margin-top: 10px;
   }
-  .account-modal {
-    margin-top: -150px;
-    display: none;
-  }
-  .field {
-    padding: 4px;
-    margin: 1px;
-  }
   .field input {
     display: inline-block;
   }
@@ -26,8 +18,8 @@
   }
   .form-btn {
     position: absolute;
-    margin-left: 820px;
-    margin-top: 70px;
+    margin-left: 900px;
+    margin-top: 90px;
   }
 </style>
 <script>
@@ -50,7 +42,7 @@
     document.getElementById("apiPass").value = '';
   }
 </script>
-<div class="login-text">You are not connected, please login or create an account: </div>
+<div class="login-text">You are not connected, please login or {{#link-to 'signup'}}Create an account!{{/link-to}}: </div><br>
   <div class="login-form">
     <div>
       <label>Email:</label>
@@ -62,50 +54,5 @@
     </div>
   </div>
 <div class="form-btn">
-<button class="btn btn-primary">Login</button>   <button type="button" class="btn btn-primary" onclick="show_modal()">Create an account</button>
-</div>
-
-<div class="account-modal" id="myaccount-modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" onclick="hide_modal()">&times;  </button>
-        <h4 class="modal-title">Account creation</h4>
-      </div>
-      <div class="modal-body">
-        <div class="field">
-          <label>First Name:</label>
-          {{input type="text" value=fname id="fname" placeholder="Enter your first name"}}
-        </div><br>
-        <div class="field">
-          <label>Last Name:</label>
-          {{input type="text" value=lname id="lname" placeholder="Enter your last name"}}
-        </div><br>
-        <div class="field">
-          <label>Company Name:</label>
-          {{input type="text" value=cname id="cname" placeholder="Enter your company's name.."}}
-        </div><br>
-        <div class="field">
-          <label>Email: </label>
-          {{input type="text" value=newemail id="newemail"placeholder="Enter your email.."}}
-        </div><br>
-        <div class="field">
-          <label>Password: </label>
-          {{input type="password" value=newpass id="newpass" placeholder="Enter your password"}}
-        </div><br>
-        <div class="field">
-          <label>API Login:</label>
-          {{input type="text" value=apiLogin id="apiLogin" placeholder="Enter your Sigfox's API Login"}}
-        </div><br>
-        <div class="field">
-          <label>API Password:</label>
-          {{input type="password" value=apiPass id="apiPass" placeholder="Enter your Sigfox's API Password"}}
-        </div><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="hide_modal()">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
+<button class="btn btn-primary">Login</button>
 </div>
