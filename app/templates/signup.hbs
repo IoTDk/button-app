@@ -27,7 +27,7 @@
   }
 </style>
 <div class="page-container">
-  <h3 class="account-text">Create your account: </h3>
+  <h3 class="account-text" id="changethis">Create your account: </h3>
 <form class="account-form">
   <div>
     <label>First Name:</label>
@@ -57,6 +57,6 @@
     <label>API Password:</label>
     {{input type="password" value=apiPass name="apiPass" placeholder="Enter your Sigfox's API Password"}}
   </div><br>
-  <p class="cancel-btn">{{#link-to 'connection'}}Cancel{{/link-to}} <button class="btn btn-primary" {{action 'addUser'}}>Sign Up</button></p>
+  <p class="cancel-btn">{{#link-to 'login'}}Cancel{{/link-to}} <button class="btn btn-primary" {{action 'addUser'}}>Sign Up</button></p>
 </form>
 </div>

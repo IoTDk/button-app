@@ -11,6 +11,11 @@ export default Controller.extend({
       let apiLogin = this.get('apiLogin');
       let apiPassword = this.get('apiPass');
 
+      function isBlank(str) {
+        return (!str || 0 === str.length);
+      }
+
+      if (!isBlank(fname) && !isBlank(lname) && !isBlank(cname) && !isBlank(email) && !isBlank(password) && !isBlank(apiLogin) && !isBlank(apiPassword)) {
       let User = this.store.createRecord('user', {
         fname: fname,
         lname: lname,
@@ -33,7 +38,11 @@ export default Controller.extend({
         apiPass: ''
       });
 
-      this.transitionToRoute('connection');
+      this.transitionToRoute('login');
+      } else {
+        this.transitionToRoute('signup');
+        document.getElementById("changethis").value = 'Fill all fields pls!!';
+      }
     }
   }
 });
