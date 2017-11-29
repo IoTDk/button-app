@@ -1,3 +1,7 @@
 <div class="page-container">
+  {{#if session.isAuthenticated}}
 <h1>All your devices we be displayed here!</h1>
+  {{else}}
+    <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+  {{/if}}
 </div>

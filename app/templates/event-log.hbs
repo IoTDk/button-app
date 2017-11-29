@@ -1,16 +1,7 @@
 <div class="page-container">
+  {{#if session.isAuthenticated}}
 <h2>On this page can you see your devices' last messages</h2>
-
-  {{#each model as |user|}}
-    <ul>
-      <li>{{user.fname}}</li>
-      <li>{{user.lname}}</li>
-      <li>{{user.cname}}</li>
-      <li>{{user.email}}</li>
-      <li>{{user.password}}</li>
-      <li>{{user.apiLogin}}</li>
-      <li>{{user.apiPassword}}</li>
-    </ul>
-  {{/each}}
-
+  {{else}}
+    <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+  {{/if}}
 </div>

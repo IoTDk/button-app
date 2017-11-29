@@ -20,7 +20,7 @@
 
 .bar-item:hover{
   color: #0f0f0f;
-  background-color:#fff
+  background-color: inherit;
 }
 
 .bar-item {
@@ -63,16 +63,22 @@
 .sidebar {
   display: block;
   height: 100%;
-  width: 6%;
+  width: 7%;
   top: 68px;
   bottom: 0;
   background-color: darkgrey;
   position: fixed;
   z-index: 3;
   overflow:auto;
+  border: 5px solid darkgrey;
+  border-radius: 3px;
+}
+
+.sidebar-item :hover {
+  background-color: #2b669a;
 }
 
 .page-container {
   margin-top: 75px;
-  margin-left: 7%;
+  margin-left: 8%;
 }

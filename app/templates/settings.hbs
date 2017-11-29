@@ -1,3 +1,18 @@
 <div class="page-container">
-<h2>Settings you want to do</h2>
+  {{#if session.isAuthenticated}}
+<h2>Settings you want to do on your account</h2>
+  <p>Here are the different things you can change:</p>
+    <ul>
+      <li>First name.</li>
+      <li>Last name.</li>
+      <li>Company name.</li>
+      <li>Email.</li>
+      <li>Password.</li>
+      <li>ApiLogin.</li>
+      <li>ApiPassword.</li>
+      <li>MAYBE CHANGE ONLY ONE THING AT TIME (POSSIBILITY)</li>
+    </ul>
+  {{else}}
+    <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+  {{/if}}
 </div>

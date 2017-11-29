@@ -1,4 +1,8 @@
 <div class="page-container">
+  {{#if session.isAuthenticated}}
 <h1>This is callbacks template!</h1>
   <p>Here, you can modify the behaviour of your devices (i.e. what it sends to you)</p>
+  {{else}}
+    <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+  {{/if}}
 </div>

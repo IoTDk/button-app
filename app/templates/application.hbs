@@ -1,7 +1,23 @@
+<style>
+  button.bar-item-right {
+    padding:8px 16px;
+    float: right;
+    width:auto;
+    border:none;
+    outline:none;
+    display:block;
+    background-color: #0f0f0f;
+  }
+</style>
 <div class="navbartop">
   <div class="topnavbar">
-    <p class="bar-item">{{#link-to 'login'}}IOT Dk{{/link-to}}</p>
-    <p class="bar-item-right">Hello user_name</p>
+    <p class="bar-item">{{#link-to 'my-devices'}}IOT Dk{{/link-to}}</p>
+    {{#if session.isAuthenticated}}
+    <p class="bar-item-right">Hello {{session.userName}}</p>
+      <button class="bar-item-right"{{action 'logout'}}>Logout</button>
+    {{else}}
+      <p class="bar-item-right">{{#link-to 'login'}}Please Login{{/link-to}}</p>
+    {{/if}}
   </div>
 </div>
 

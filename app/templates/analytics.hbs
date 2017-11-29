@@ -1,3 +1,7 @@
 <div class="page-container">
+  {{#if session.isAuthenticated}}
 <h3>This is analytics page, here we will display dashboards</h3>
+  {{else}}
+    <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+  {{/if}}
 </div>
