@@ -1,0 +1,7 @@
+<div class="page-container">{{#if session.isAuthenticated}}
+<h3>Export page</h3>
+<p>Here, you will be able to export different devices' data.</p>
+{{else}}
+  <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
+{{/if}}
+</div>

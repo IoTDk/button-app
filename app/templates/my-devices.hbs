@@ -1,6 +1,49 @@
+<style>
+  ul.device {
+    display: inline-block;
+    list-style: none;
+    width: 300px;
+    margin: 10px;
+  }
+</style>
 <div class="page-container">
   {{#if session.isAuthenticated}}
-<h1>All your devices we be displayed here!</h1>
+<h1>All your devices will be displayed here!</h1>
+    {{#each model as |device|}}
+    <ul class="device">
+      {{#if (eq device.devicetypename "Sayme Mybutton(IoT Denmark)")}}
+        <img class="sayme" src="/assets/images/SaymeMybutton.jpg">
+      {{/if}}
+      {{#if (eq device.devicetypename "Service Button")}}
+        <img class="antalis" src="/assets/images/Antalisthings.jpg">
+      {{/if}}
+      {{#if (eq device.devicetypename "UnaBiz UnaBell V1M")}}
+        <img class="unabiz" src="/assets/images/IMAG0208.jpg">
+      {{/if}}
+      {{#if (eq device.devicetypename "Sensit 2.1 IoT Denmark 2")}}
+        <img class="sensit" src="/assets/images/Sensit.png">
+      {{/if}}
+      {{#if (eq device.devicetypename "Sensit 2.1_RCZ1")}}
+        <img class="sensit" src="/assets/images/Sensit.png">
+      {{/if}}
+      {{#if (eq device.devicetypename "Leak Guard")}}
+        <img class="leakguard" src="/assets/images/Leakguard.jpeg">
+      {{/if}}
+      {{#if (eq device.devicetypename "Sensit 2.1 IoT Denmark")}}
+        <img class="sensit" src="/assets/images/Sensit.png">
+      {{/if}}
+      {{#if (eq device.devicetypename "TSwasTe")}}
+        <img class="tswaste" src="/assets/images/Tswaste.jpeg">
+      {{/if}}
+      {{#if (eq device.devicetypename "Smockeo")}}
+        <img class="smockeo" src="/assets/images/Smockeo.jpg">
+      {{/if}}
+      <li>ID: {{device.deviceid}}</li>
+      <li>Group: {{device.devicetypegroup}}</li>
+      <li>Last Message: {{device.last}}</li>
+      <li>{{#link-to 'device' device.id}}Details{{/link-to}}</li>
+    </ul>
+  {{/each}}
   {{else}}
     <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
   {{/if}}

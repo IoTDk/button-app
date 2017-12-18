@@ -1,38 +1,41 @@
 <style>
   .login-form {
-    position: absolute;
-    margin-left: 650px;
-    margin-top: 10px;
+    position: relative;
   }
   .field input {
     display: inline-block;
   }
   label {
     display: inline-block;
-    width: 210px;
+    width: 70px;
     text-align: right;
   }
+  .login {
+    margin-top: 15%;
+    margin-left: 42%;
+  }
   .login-text {
-    margin-top: 300px;
-    margin-left: 750px;
+    position: relative;
   }
   .form-btn {
-    position: absolute;
-    margin-left: 900px;
-    margin-top: 90px;
+    position: relative;
+    margin-left: 12%;
+    margin-top: 1%;
   }
 </style>
-<div class="login-text">You are not connected, please Login or {{#link-to 'signup'}}Create an account!{{/link-to}}: </div><br>
-<div class="login-form">
-  <div>
-    <label>Email:</label>
-    {{input type="text" value=email name=email placeholder="Enter your email.."}}
+<div class="login">
+  <div class="login-text" id="log-text">You are not connected, please Login or {{#link-to 'signup'}}Create an account!{{/link-to}}: </div><br>
+  <div class="login-form">
+    <div>
+     <label>Email:</label>
+      {{input type="text" value=email name=email placeholder="Enter your email.."}}
+    </div>
+    <div>
+     <label>Password: </label>
+      {{input type="password" value=password name=password placeholder="Enter your password"}}
+    </div>
   </div>
-  <div>
-    <label>Password: </label>
-    {{input type="password" value=password name=password placeholder="Enter your password"}}
+  <div class="form-btn">
+    <button class="btn btn-primary" {{action 'authenticate'}}>Login</button>
   </div>
-</div>
-<div class="form-btn">
-  <button class="btn btn-primary" {{action 'authenticate'}}>Login</button>
 </div>

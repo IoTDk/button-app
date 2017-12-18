@@ -6,10 +6,11 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
+//determines accessible routes, which are nested into another and specific paths.
+
 Router.map(function() {
   this.route('my-devices');
   this.route('event-log');
-  this.route('callbacks');
   this.route('analytics');
   this.route('settings');
   this.route('help', function() {
@@ -18,6 +19,8 @@ Router.map(function() {
   });
   this.route('signup');
   this.route('login');
+  this.route('device', { path: 'my-devices/:device_id'});
+  this.route('export');
 });
 
 export default Router;

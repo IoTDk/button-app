@@ -1,0 +1,40 @@
+<style>
+  ul li {
+    list-style: none;
+  }
+  .device {
+    display: inline;
+    width: 150px;
+    height: 150px;
+  }
+</style>
+<div class="page-container">
+  <ul>
+    <li class="device"><strong>Information concerning device type: </strong></li><br>
+  <li>Device type ID: {{model.devicetypeid}}</li>
+    {{#if (eq model.devicetypename "TSwasTe")}}
+      <img class="device" src="/assets/images/Tswaste.jpeg">
+    {{/if}}
+  <li>Device type Name: {{model.devicetypename}}</li>
+  <li>Device type group: {{model.devicetypegroup}}</li><br>
+    <li><strong>Information concerning specific device:</strong> </li><br>
+  <li>Device ID: {{model.id}}</li>
+  <li>Device name: {{model.name}}</li>
+  <li>Device type: {{model.typeofdevice}}</li>
+  <li>Date of last transmission: {{model.last}}</li>
+    <li>State: {{model.state}}</li>
+    <li>Latitude: {{model.lat}}</li>
+    <li>Longitude: {{model.lng}}</li>
+    <ul>
+      <li>Messages: </li>
+      {{#if model.messages}}
+        {{#each model.messages as |message|}}
+          <li>Time : {{message.time}}</li>
+          <li>Data : {{message.transmitted}}</li><br>
+          {{/each}}
+      {{else}}
+        <li>No messages available for this device.</li>
+      {{/if}}
+    </ul>
+</ul>
+</div>

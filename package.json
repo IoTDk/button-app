@@ -17,10 +17,13 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-stage-0": "^6.24.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-cli": "~2.16.2",
     "ember-cli-app-version": "^3.0.0",
-    "ember-cli-babel": "^6.6.0",
+    "ember-cli-babel": "^6.10.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-htmlbars": "^2.0.1",
@@ -33,13 +36,19 @@
     "ember-data": "~2.16.2",
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^4.0.0-alpha.13",
+    "ember-link-action": "0.0.37",
     "ember-load-initializers": "^1.0.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
+    "ember-truth-helpers": "^2.0.0",
     "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
   }
 }

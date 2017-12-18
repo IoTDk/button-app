@@ -9,12 +9,18 @@ export default Controller.extend({
     authenticate: function () {
        let {email, password} = this.getProperties('email', 'password');
 
-       $.post('http://localhost/MyRESTApi/public/auth',{email: email, password: password}, function (data, status) {
-       })
+       $.post('http://localhost/MyRESTApi/public/auth',{email: email, password: password}, function () {})
          .done(() => {})
-         .fail(() => {alert('Request issue...' . status);})
-         .always(data => { //IF WRONG VALUES (REQUEST FAIL?)
+         .fail(() => {alert('Request issue...');})
+         .then(data => {
            let user = JSON.parse(data);
+           if (JSON.stringify(user.Error)) {
+             alert('Wrong email or password.');
+             this.setProperties({
+               email: '',
+               password: ''
+             });
+           } else {
            this.set('session.userName', user.fname);
            this.set('session.userId', user.id);
            this.set('session.apiLogin', user.apiLogin);
@@ -24,8 +30,8 @@ export default Controller.extend({
              email: '',
              password: ''
            });
-
            this.transitionToRoute('my-devices');
+           }
          });
     },
   }

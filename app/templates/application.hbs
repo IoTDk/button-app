@@ -10,21 +10,19 @@
   }
 </style>
 <div class="navbartop">
-  <div class="topnavbar">
-    <p class="bar-item">{{#link-to 'my-devices'}}IOT Dk{{/link-to}}</p>
+    <p class="navbartop-left">{{#link-to 'my-devices'}}IOT Dk{{/link-to}}</p>
     {{#if session.isAuthenticated}}
-    <p class="bar-item-right">Hello {{session.userName}}</p>
-      <button class="bar-item-right"{{action 'logout'}}>Logout</button>
+    <p class="navbartop-right">Hello {{session.userName}}</p>
+      <button class="navbartop-right"{{action 'logout'}}>Logout</button>
     {{else}}
-      <p class="bar-item-right">{{#link-to 'login'}}Please Login{{/link-to}}</p>
+      <p class="navbartop-right">{{#link-to 'login'}}Please Login{{/link-to}}</p>
     {{/if}}
-  </div>
 </div>
 
 <div class="sidebar">
   <p class="sidebar-item">{{fa-icon "laptop"}} {{#link-to 'my-devices'}}My Devices{{/link-to}}</p>
   <p class="sidebar-item">{{fa-icon "calendar-o"}} {{#link-to 'event-log'}}Event Log{{/link-to}}</p>
-  <p class="sidebar-item">{{fa-icon "arrows-h"}} {{#link-to 'callbacks'}}Callbacks{{/link-to}}</p>
+  <p class="sidebar-item">{{fa-icon "arrows-h"}} {{#link-to 'export'}}Export{{/link-to}}</p>
   <p class="sidebar-item">{{fa-icon "pie-chart"}} {{#link-to 'analytics'}}Analytics{{/link-to}}</p>
   <p class="sidebar-item">{{fa-icon "cogs"}} {{#link-to 'settings'}}Settings{{/link-to}}</p>
   <p class="sidebar-item">{{fa-icon "question-circle"}} {{#link-to 'help'}}Help{{/link-to}}</p>
