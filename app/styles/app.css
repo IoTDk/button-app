@@ -1,4 +1,9 @@
 /* templates/application.hbs*/
+.iotdklogo {
+  width: 80px;
+  height: 35px;
+}
+
 .navbartop {
   position: fixed;
   width: 100%;
@@ -16,7 +21,7 @@
   height: 6%;
 }
 
-.navbartop-left:hover, .navbartop-right:hover {
+.navbartop-left:hover, .navbartop-right-logout:hover {
   color: red;
   background-color: inherit;
 }
@@ -25,6 +30,14 @@
   padding: 8px 16px;
   float: left;
   display: block;
+}
+
+.navbartop-right-logout {
+  padding: 8px 16px;
+  float: right;
+  display: block;
+  border: none;
+  background-color: #0f0f0f;
 }
 
 .navbartop-right {
@@ -69,7 +82,7 @@
 
 /* all templates - in order to avoid display on or under the navigation bars (top and side)*/
 .page-container {
-  margin-top: 6%;
+  margin-top: 4%;
   margin-left: 9%;
 }
 
@@ -87,4 +100,59 @@
 .sayme, .antalis, .unabiz, .sensit, .leakguard, .tswaste, .smockeo {
   width: 100px;
   height: 100px;
+}
+
+/* each device in my-devices.hbs */
+ul.eachdevice {
+  display: inline-block;
+  list-style: none;
+  width: 300px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+/* device.hbs */
+ul li {
+  list-style: none;
+}
+.device {
+  display: inline;
+  width: 150px;
+  height: 150px;
+}
+
+/* login page styles */
+.login-form {
+  position: relative;
+}
+
+.field input {
+  display: inline-block;
+}
+
+label {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+
+.login {
+  margin-top: 15%;
+  margin-left: 42%;
+}
+
+.login-text {
+  position: relative;
+}
+
+.form-btn {
+  position: relative;
+  margin-left: 12%;
+  margin-top: 1%;
+}
+
+/* settings.hbs */
+li.update-form {
+  display: block;
 }

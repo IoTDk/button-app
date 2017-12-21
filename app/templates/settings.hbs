@@ -1,17 +1,17 @@
 <div class="page-container">
   {{#if session.isAuthenticated}}
-<h2>Settings you want to do on your account</h2>
+<h2>Settings you want to do on your user account</h2>
   <p>Here are the different things you can change:</p>
     <ul>
-      <li>First name.</li>
-      <li>Last name.</li>
-      <li>Company name.</li>
-      <li>Email.</li>
-      <li>Password.</li>
-      <li>ApiLogin.</li>
-      <li>ApiPassword.</li>
-      <li>MAYBE CHANGE ONLY ONE THING AT TIME (POSSIBILITY)</li>
+      <li class="fname update-form">First name.</li> {{#link-to 'settings.first-name'}}Modify{{/link-to}}
+      <li class="lname update-form">Last name.</li> {{#link-to 'settings.last-name'}}Modify{{/link-to}}
+      <li class="cname update-form">Company name.</li> {{#link-to 'settings.company-name'}}Modify{{/link-to}}
+      <li class="email update-form">Email.</li> {{#link-to 'settings.email'}}Modify{{/link-to}}
+      <li class="password update-form">Password.</li> {{#link-to 'settings.password'}}Modify{{/link-to}}
+      <li class="apilogin update-form">ApiLogin.</li> {{#link-to 'settings.api-login'}}Modify{{/link-to}}
+      <li class="apipassword update-form">ApiPassword.</li> {{#link-to 'settings.api-password'}}Modify{{/link-to}}
     </ul>
+    {{outlet}}
   {{else}}
     <p>Please {{#link-to 'login'}}Login{{/link-to}}.</p>
   {{/if}}

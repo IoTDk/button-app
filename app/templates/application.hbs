@@ -1,19 +1,8 @@
-<style>
-  button.bar-item-right {
-    padding:8px 16px;
-    float: right;
-    width:auto;
-    border:none;
-    outline:none;
-    display:block;
-    background-color: #0f0f0f;
-  }
-</style>
 <div class="navbartop">
-    <p class="navbartop-left">{{#link-to 'my-devices'}}IOT Dk{{/link-to}}</p>
+    <p class="navbartop-left">{{#link-to 'my-devices'}}<img class="iotdklogo" src="/assets/images/iotdklogo.png">{{/link-to}}</p>
     {{#if session.isAuthenticated}}
     <p class="navbartop-right">Hello {{session.userName}}</p>
-      <button class="navbartop-right"{{action 'logout'}}>Logout</button>
+      <button class="navbartop-right-logout"{{action 'logout'}}>Logout</button>
     {{else}}
       <p class="navbartop-right">{{#link-to 'login'}}Please Login{{/link-to}}</p>
     {{/if}}

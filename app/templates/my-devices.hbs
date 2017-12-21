@@ -1,16 +1,8 @@
-<style>
-  ul.device {
-    display: inline-block;
-    list-style: none;
-    width: 300px;
-    margin: 10px;
-  }
-</style>
 <div class="page-container">
   {{#if session.isAuthenticated}}
-<h1>All your devices will be displayed here!</h1>
+<h1>All devices corresponding to your Sigfox backend group:</h1>
     {{#each model as |device|}}
-    <ul class="device">
+    <ul class="eachdevice">
       {{#if (eq device.devicetypename "Sayme Mybutton(IoT Denmark)")}}
         <img class="sayme" src="/assets/images/SaymeMybutton.jpg">
       {{/if}}

@@ -7,6 +7,7 @@ export default DS.Transform.extend({
   deserialize(serialized) {
     let pad = function (input) {return input < 10 ? "0" + input : input;};
     let date = serialized ? new Date(serialized * 1000) : new Date();
+    if (serialized === 0) {return ('None.')}
     let right_date = [
       pad(date.getDate()),
       pad(date.getMonth()),

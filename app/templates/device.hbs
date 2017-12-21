@@ -1,20 +1,7 @@
-<style>
-  ul li {
-    list-style: none;
-  }
-  .device {
-    display: inline;
-    width: 150px;
-    height: 150px;
-  }
-</style>
 <div class="page-container">
   <ul>
     <li class="device"><strong>Information concerning device type: </strong></li><br>
   <li>Device type ID: {{model.devicetypeid}}</li>
-    {{#if (eq model.devicetypename "TSwasTe")}}
-      <img class="device" src="/assets/images/Tswaste.jpeg">
-    {{/if}}
   <li>Device type Name: {{model.devicetypename}}</li>
   <li>Device type group: {{model.devicetypegroup}}</li><br>
     <li><strong>Information concerning specific device:</strong> </li><br>

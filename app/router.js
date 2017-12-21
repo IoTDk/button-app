@@ -12,7 +12,16 @@ Router.map(function() {
   this.route('my-devices');
   this.route('event-log');
   this.route('analytics');
-  this.route('settings');
+  this.route('settings', function() {
+    this.route('change');
+    this.route('first-name');
+    this.route('last-name');
+    this.route('company-name');
+    this.route('email');
+    this.route('password');
+    this.route('api-login');
+    this.route('api-password');
+  });
   this.route('help', function() {
     this.route('this');
     this.route('sigfox');
